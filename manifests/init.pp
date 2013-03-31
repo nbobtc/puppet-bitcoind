@@ -12,6 +12,7 @@ class bitcoind
         "build-essential",
         "libssl-dev",
         "libdb4.8-dev",
+        "libdb++-dev",
         "libboost1.48-dev",
         "libminiupnpc8",
         "libminiupnpc-dev",
