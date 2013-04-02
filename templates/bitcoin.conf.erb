@@ -2,14 +2,25 @@
 #
 # Configuration file for bitcoind
 #
-
+<% if @testnet %>
+testnet=1
+<% else %>
 testnet=0
+<% end %>
 #proxy=127.0.0.1:9050
 #addnode=0.0.0.0
 #addnode=0.0.0.1
 #connect=1.1.1.1
 #connect=1.1.1.2
+<% if @noirc %>
 noirc=1
+<% else %>
+noirc=0
+<% end %>
+
+# Allow JSON-RPC commands
 server=1
 rpcuser=<%= @rpcuser %>
 rpcpassword=<%= @rpcpassword %>
+rpctimeout=<%= @rpctimeout %>
+rpcport=<%= @rpcport %>

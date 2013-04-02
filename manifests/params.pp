@@ -13,7 +13,7 @@ class bitcoind::params
     $conf = 'bitcoin.conf'
 
     # Specify pid file (default: bitcoind.pid)
-    $pid_file = 'bitcoin.pid'
+    $pid_file = '/var/run/bitcoin.pid'
 
     # Generate or not to generate coins
     $geneate = false
@@ -125,6 +125,8 @@ class bitcoind::params
     
     # Send commands to node running on <ip> (default: 127.0.0.1)
     $rpcconnect = '127.0.0.1'
+
+    $rpctimeout = 30
     
     # Execute command when the best block changes (%s in cmd is replaced by block hash)
     $blocknotify = false

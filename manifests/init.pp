@@ -44,6 +44,7 @@ class bitcoind(
     $rpcport          = $bitcoind::params::rpcport,
     $rpcallowip       = $bitcoind::params::rpcallowip,
     $rpcconnect       = $bitcoind::params::rpcconnect,
+    $rpctimeout       = $bitcoind::params::rpctimeout,
     $blocknotify      = $bitcoind::params::blocknotify,
     $walletnotify     = $bitcoind::params::walletnotify,
     $upgradewallet    = $bitcoind::params::upgradewallet,
