@@ -7,7 +7,7 @@
 class bitcoind(
     $rpcuser     = undef,
     $rpcpassword = undef,
-    $tesnet      = $bitcoind::params::testnet,
+    $testnet     = $bitcoind::params::testnet,
 )
 {
     include bitcoind::params
