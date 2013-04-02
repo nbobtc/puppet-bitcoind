@@ -17,8 +17,8 @@
 PATH=/sbin:/usr/sbin:/bin:/usr/bin
 DESC="Bitcoin Daemon"
 NAME=bitcoind
-DAEMON=/usr/sbin/$NAME
-DAEMON_ARGS="<%= @bitcoind_args %>"
+DAEMON=/usr/bin/$NAME
+DAEMON_ARGS="-daemon -conf=<%= scope.lookupvar('bitcoind::params::conf') %> -datadir=<%= scope.lookupvar('bitcoind::params::datadir') %>"
 PIDFILE=/var/run/<%= scope.lookupvar('bitcoind::params::pid_file') %>
 SCRIPTNAME=/etc/init.d/bitcoind
 

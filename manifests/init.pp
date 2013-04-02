@@ -4,7 +4,10 @@
 #
 # Installs and configures bitcoind to run as a daemon
 #
-class bitcoind
+class bitcoind(
+    $rpcuser     = undef,
+    $rpcpassword = undef,
+)
 {
     include bitcoind::params
 
@@ -45,6 +48,7 @@ class bitcoind
     }
 
     file { '/etc/init.d/bitcoind':
+        mode    => '755',
         ensure  => file,
         owner   => 'root',
         group   => 'root',
