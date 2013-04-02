@@ -83,6 +83,7 @@ class bitcoind(
         ensure => directory,
         owner  => 'root',
         group  => 'root',
+        mode   => '0600',
     }
 
     file { "${bitcoind::params::datadir}/bitcoin.conf":
