@@ -4,6 +4,8 @@
 #
 class bitcoind::ppa
 {
+    include bitcoind::params
+
     ####
     #
     # ppa repository
@@ -26,15 +28,6 @@ class bitcoind::ppa
         command   => "apt-get update",
         logoutput => false,
         require   => Exec['add-apt-repository ppa:bitcoin/bitcoin'],
-    }
-
-    ####
-    #
-    # Instals bitcoind via apt-get
-    #
-    package { "bitcoind":
-        ensure  => present,
-        require => Exec['add-apt-repository ppa:bitcoin/bitcoin'],
     }
 
     package { "python-software-properties":

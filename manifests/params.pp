@@ -8,6 +8,7 @@
 #
 class bitcoind::params
 {
+
     # Specify configuration file (default: bitcoin.conf)
     $conf = 'bitcoin.conf'
 
@@ -18,7 +19,7 @@ class bitcoind::params
     $geneate = false
 
     # Specify data directory
-    $datadir = '/path/to/bitcoin/data'
+    $datadir = '/etc/bitcoin'
 
     # Set database cache size in megabytes (default: 25)
     $dbcache = 25
@@ -135,7 +136,7 @@ class bitcoind::params
     $upgradewallet = false
     
     # Set key pool size to <n> (default: 100)
-    keypool = 100
+    $keypool = 100
     
     # Rescan the block chain for missing wallet transactions
     $rescan = false
