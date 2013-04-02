@@ -24,6 +24,7 @@ class bitcoind(
     $onlynet          = $bitcoind::params::onlynet,
     $discover         = $bitcoind::params::discover,
     $irc              = $bitcoind::params::irc,
+    $noirc            = $bitcoind::params::noirc,
     $checkpoints      = $bitcoind::params::checkpoints,
     $listen           = $bitcoind::params::listen,
     $bind             = $bitcoind::params::bind,

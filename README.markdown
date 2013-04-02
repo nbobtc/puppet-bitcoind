@@ -22,4 +22,5 @@ Next you will need to include the class itself with some parameters.
         testnet     => true,
         rpcuser     => 'really_long_username',
         rpcpassword => 'no_short_password_here',
+        rpcport     => 18332,
     }

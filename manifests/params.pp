@@ -64,7 +64,8 @@ class bitcoind::params
     $discover = true
 
     # Find peers using internet relay chat (default: 0)
-    $irc = false
+    $irc   = false
+    $noirc = true
 
     # Only accept block chain matching built-in checkpoints (default: 1)
     $checkpoints = true
