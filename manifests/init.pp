@@ -23,7 +23,7 @@ class bitcoind(
     }
 
     service { 'bitcoind':
-        ensure    => false,
+        ensure    => true,
         enable    => true, # enable on boot
         path      => '/etc/init.d',
         subscribe => Package['bitcoind'],
