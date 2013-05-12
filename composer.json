@@ -11,5 +11,8 @@
     ],
     "requires": {
         "joshuaestes/composer-installer-puppet": "*"
+    },
+    "extra": {
+        "puppet-module": "bitcoind"
     }
 }
