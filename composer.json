@@ -1,5 +1,6 @@
 {
     "name": "nbobtc/puppet-bitcoind",
     "type": "puppet-module",
-    "license": "MIT"
+    "license": "MIT",
+    "description": "Puppet module for bitcoin daemon"
 }
