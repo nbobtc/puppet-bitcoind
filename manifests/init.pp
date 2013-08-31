@@ -76,8 +76,7 @@ class bitcoind(
     service { 'bitcoind':
         ensure    => true,
         enable    => true, # enable on boot
-        path      => '/etc/init.d',
-        subscribe => Package['bitcoind'],
+        path      => '/etc/init.d'
     }
 
     file { "${bitcoind::params::datadir}":
@@ -95,7 +94,6 @@ class bitcoind(
         notify  => Service['bitcoind'],
         require => [
             File[$bitcoind::params::datadir],
-            Package['bitcoind'],
         ],
     }
 
@@ -106,7 +104,6 @@ class bitcoind(
         group   => 'root',
         content => template('bitcoind/bitcoind.erb'),
         notify  => Service['bitcoind'],
-        require => Package['bitcoind'],
     }
 
 }
