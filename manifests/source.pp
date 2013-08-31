@@ -11,10 +11,10 @@ class bitcoind::source
         "git",
         "build-essential",
         "libssl-dev",
-        "libdb4.8-dev",
+        "libdb5.1-dev",
         "libdb++-dev",
-        "libboost1.48-dev",
-        "libminiupnpc8",
+        "libboost1.49-dev",
+        "libminiupnpc5",
         "libminiupnpc-dev",
     ]
     $clone_path = "/opt/bitcoin"
