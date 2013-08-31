@@ -69,10 +69,6 @@ class bitcoind(
         shell   => '/bin/bash',
     }
 
-    package { 'bitcoind':
-        ensure => installed,
-    }
-
     service { 'bitcoind':
         ensure    => true,
         enable    => true, # enable on boot
