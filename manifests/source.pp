@@ -6,16 +6,27 @@ class bitcoind::source
 {
     include bitcoind::params
 
+    notify{"Starting build of bitcoind.... This may take a while": }
+    notify{"NOTE:If you get an error at this stage, enlarge the swap file to 1GB. See - https://bitcointalk.org/index.php?topic=110627.0": }
+    
+    # 1GB SWAPFILE CODE
+    #
+    # sudo dd if=/dev/zero of=/swapfile bs=64M count=16
+    # sudo mkswap /swapfile
+    # sudo swapon /swapfile
+    
     $repository = "git://github.com/bitcoin/bitcoin.git"
     $requires   = [
         "git",
         "build-essential",
         "libssl-dev",
-        "libdb4.8-dev",
+        "libdb5.1-dev",
         "libdb++-dev",
-        "libboost1.48-dev",
-        "libminiupnpc8",
-        "libminiupnpc-dev",
+        "libboost1.49-all-dev",
+        "libboost1.49-dbg",
+        "libboost-all-dev",
+        "libminiupnpc5",
+        "libminiupnpc-dev"
     ]
     $clone_path = "/opt/bitcoin"
     $install_path = "/usr/bin"
