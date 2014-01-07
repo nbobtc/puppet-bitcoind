@@ -4,6 +4,7 @@
     "license": "MIT",
     "homepage": "https://github.com/nbobtc/puppet-bitcoind",
     "description": "Puppet module for bitcoin daemon",
+    "minimum-stability": "dev",
     "repositories": [
         {
             "type": "git",
