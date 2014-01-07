@@ -10,9 +10,14 @@
         }
     ],
     "requires": {
-        "joshuaestes/composer-installer-puppet": "*"
+        "joshuaestes/composer-installer-puppet": "~2.0"
     },
     "extra": {
-        "puppet-module": "bitcoind"
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        },
+        "puppet": {
+            "module_name": "bitcoind"
+        }
     }
 }
