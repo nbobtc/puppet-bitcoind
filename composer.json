@@ -4,14 +4,13 @@
     "license": "MIT",
     "homepage": "https://github.com/nbobtc/puppet-bitcoind",
     "description": "Puppet module for bitcoin daemon",
-    "minimum-stability": "dev",
     "repositories": [
         {
             "type": "git",
             "url": "git://github.com/JoshuaEstes/ComposerInstallerPuppet.git"
         }
     ],
-    "requires": {
+    "require": {
         "joshuaestes/composer-installer-puppet": "~2.0"
     },
     "extra": {
