@@ -2,6 +2,7 @@
     "name": "nbobtc/puppet-bitcoind",
     "type": "puppet-module",
     "license": "MIT",
+    "homepage": "https://github.com/nbobtc/puppet-bitcoind",
     "description": "Puppet module for bitcoin daemon",
     "repositories": [
         {
@@ -13,11 +14,11 @@
         "joshuaestes/composer-installer-puppet": "~2.0"
     },
     "extra": {
-        "branch-alias": {
-            "dev-master": "0.1.x-dev"
-        },
         "puppet": {
             "module_name": "bitcoind"
+        },
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
         }
     }
 }
